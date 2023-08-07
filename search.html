@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google </title>
+    <!-- Your CSS and JS files, if needed -->
+<script>
+# app.py
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def google_search():
+    return render_template('google_search.html')
+
+@app.route('/images')
+def google_image_search():
+    return render_template('https://www.google.com/imghp?hl=en')
+
+@app.route('/advanced')
+def google_advanced_search():
+    return render_template('https://www.google.com/advanced_search')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+</script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+              <form action="https://www.google.com/search">
+            <br> <input type="text" name="q" placeholder="Search"></br>
+           
+            <input type="submit" value="Google Search">
+        </form>
+    </header>
+
+    <!-- Main Content (Search Results) -->
+    <div>
+        <!-- Display the search results here -->
+    </div>
+        </span>
+    </footer>
+    
+      <form action="https://www.google.com/search" method="get">
+            <input type="hidden" name="tbm" value="isch">
+           <br> <input type="text" name="q" placeholder="Search Images"></br>
+            <input type="submit" value="Search Image">
+        </form>
+    <div>
+        <!-- Display the image search results here -->
+    </div>
+
+       
+<form action="https://www.google.com/advanced_search">
+ <br><input type="text" name="q" placeholder="Search"></br>
+           
+            <input type="submit" value="Google Advance">
+        </form>
+ <!-- Main Content (Advanced Search Form) -->
+    <div>
+        <!-- Implement the advanced search form here -->
+    </div>
+
+    
+       
+        </span>
+    </footer>
+</body>
+</html>
